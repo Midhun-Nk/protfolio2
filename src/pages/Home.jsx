@@ -26,6 +26,15 @@ export default function Home() {
     <div className="space-y-20">
       {/* Hero Section */}
       <section className="min-h-[80vh] flex flex-col justify-center items-center text-center px-4">
+        {/* Circle Avatar */}
+        <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-pink-500 shadow-lg mb-6">
+          <img
+            src="/images/avatar.avif" // <-- Replace with your avatar path
+            alt="Midhun Mike"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
         <SplitText
           text="Midhun Mike!"
           className="text-2xl font-semibold text-center"
@@ -73,6 +82,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+
       {/* Content Creator Section */}
       <section className="bg-gray-800 py-12 px-6 rounded-lg shadow-lg max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-pink-500">Content Creator</h2>
