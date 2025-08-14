@@ -11,7 +11,7 @@ export default function App() {
     <div className="bg-gradient-to-br from-gray-900 via-black to-gray-950 min-h-screen text-white">
       {/* Navbar */}
       <nav className="flex justify-between items-center px-8 py-4 bg-black/50 backdrop-blur-md border-b border-gray-800 sticky top-0">
-        <h1 className="text-xl font-bold text-yellow-400">Midhun Nk</h1>
+        <h1 className="text-xl font-bold text-yellow-400">Midhun MiKE</h1>
         <div className="flex gap-6">
           <NavLink
             to="/"
