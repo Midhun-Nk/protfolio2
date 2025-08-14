@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import TextType from "../components/TextType";
 import CurvedLoop from "../components/CurvedLoop";
 import FallingText from "../components/FallingText";
+import SplitText from "../components/TextType";
 
 export default function Home() {
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
+  };
   const skills = [
     "HTML",
     "CSS",
@@ -22,12 +26,19 @@ export default function Home() {
     <div className="space-y-20">
       {/* Hero Section */}
       <section className="min-h-[80vh] flex flex-col justify-center items-center text-center px-4">
-        <TextType
-          text={["Midhun NK", "for your websites", "Happy coding!"]}
-          typingSpeed={75}
-          pauseDuration={1500}
-          showCursor={true}
-          cursorCharacter="|"
+        <SplitText
+          text="Midhun Mike!"
+          className="text-2xl font-semibold text-center"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
         />
         <p className="mt-6 max-w-2xl text-lg text-gray-300">
           Full-stack developer in the making 🚀 — building projects in React,
